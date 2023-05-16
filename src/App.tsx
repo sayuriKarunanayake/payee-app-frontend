@@ -1,25 +1,23 @@
-import logo from './assets/logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './App.module.scss';
+import { MakeApayment } from './components/make-apayment/make-apayment';
+import { PayDetails } from './components/pay-details/pay-details';
+import { ReviewandVerify } from './components/reviewand-verify/reviewand-verify';
+import { ReviewDetails } from './components/review-details/review-details';
 
 function App() {
-    return (
-        <div className={styles.App}>
-            <header className={styles['App-header']}>
-                <img src={logo} className={styles['App-logo']} alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className={styles['App-link']}
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
-    );
+  return (
+    <Router>
+      <div className={styles.App}>
+        <Routes>
+          <Route path="/" element={<MakeApayment />} />
+          <Route path="/paydetails" element={<PayDetails />} />
+          <Route path="/reviewandverify" element={<ReviewandVerify />} />
+          <Route path="/reviewdetails" element={<ReviewDetails />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

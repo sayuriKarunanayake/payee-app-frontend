@@ -1,0 +1,74 @@
+.root {
+  position: relative;
+}
+.container {
+  text-align: center;
+}
+.header {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+.img {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+  justify-items: center;
+  align-content: center;
+}
+.progress-container-line {
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.payingOption {
+  display: grid;
+  flex-direction: column;
+  text-align: start;
+  grid-auto-flow: row;
+}
+.buutonpaydetails {
+  background-color: #848be4;
+  color: #fff8f8;
+  border: 1px none white;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+}
+.formpaydetails {
+  margin: 30px;
+}

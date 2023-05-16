@@ -1,0 +1,84 @@
+.root {
+}
+.container {
+  text-align: center;
+}
+.header {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+.img {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+  justify-items: center;
+  align-content: center;
+}
+.progress-container-line {
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+.formpaydetails {
+  margin: 20px;
+  text-align: center;
+}
+.sortcode {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.sortcodeinput {
+  padding: 0px;
+  width: 100px;
+}
+.datebutton {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+  text-align: start;
+  align-content: center;
+  margin: 4px 4px 4px 100px;
+  padding: 0px;
+  direction: ltr;
+}
+.buttonsubmit {
+  background-color: #848be4;
+  color: #fff8f8;
+  border: 1px none white;
+  border-radius: 5px;
+}
