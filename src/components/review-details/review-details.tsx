@@ -14,10 +14,12 @@ export const ReviewDetails = ({ className }: ReviewDetailsProps) => {
         <div className={classNames(styles.root, className)}>
             <div className={styles.header}>
                 <img
-                    src="https://freeiconshop.com/wp-content/uploads/edd/bank-flat.png"
+                    src="https://media.licdn.com/dms/image/C4E16AQGK2xT_nHGS_g/profile-displaybackgroundimage-shrink_200_800/0/1622715953237?e=2147483647&v=beta&t=s8o3iF-w3g8Y3maCPdAsN6uCllE3Nq7IhuSvAOGdSgY"
                     className={styles.img}
                 />
-                <h1>Bank</h1>
+                <div className={styles.title}>
+                    <h1>IFpay</h1>
+                </div>
             </div>
             <hr />
             <div className={classNames(styles['progress-container'], styles.progress)}>

@@ -12,8 +12,10 @@
 }
 .img {
   height: 50px;
-  width: 50px;
-  padding: 10px;
+  padding: 0px;
+  width: 100px;
+  margin: 20px 20px 20px 50px;
+  border: 0px solid #6c5b5b;
 }
 .progress-container {
   display: flex;
@@ -85,4 +87,10 @@
   align-items: center;
   justify-items: center;
   flex-direction: column;
+}
+.title {
+  margin: 0px;
+  display: flex;
+  align-items: start;
+  align-content: start;
 }
