@@ -15,40 +15,6 @@
   margin: 20px 20px 20px 50px;
   border: 0px solid #6c5b5b;
 }
-.progress-container {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 30px;
-  max-width: 100%;
-  width: 350px;
-  justify-items: center;
-  align-content: center;
-}
-.progress-container-line {
-  background-color: #8cfd81;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100%;
-  z-index: -1;
-}
-
-.circle {
-  background-color: #d3e8d3;
-  color: #999;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid var(--line-border-empty);
-  transition: 0.4s ease;
-}
-
 .buttonstyle {
   border-radius: 5px;
   background-color: #848be4;
@@ -74,4 +40,22 @@
 }
 .buttondiv {
   margin: 70px 0px 0px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttonedit {
+  margin: 0;
+  padding: 5px;
+  background-color: #b9a8a8;
+  border-radius: 5px;
+  border: 0px solid #191111;
+  color: #ffffff;
+}
+.imageconfirm {
+  width: 150px;
 }
