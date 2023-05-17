@@ -1,5 +1,7 @@
 import styles from './reviewand-verify.module.scss';
 import classNames from 'classnames';
+import { useState, useEffect } from 'react';
+
 
 export interface ReviewandVerifyProps {
     className?: string;
@@ -10,6 +12,18 @@ export interface ReviewandVerifyProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-reviewand-verifys-and-templates
  */
 export const ReviewandVerify = ({ className }: ReviewandVerifyProps) => {
+    
+    const [isDialogOpen, setDialogOpen] = useState(false);
+
+    const handleOpenDialog = () => {
+      setDialogOpen(true);
+    };
+  
+    const handleCloseDialog = () => {
+      setDialogOpen(false);
+    };
+  
+
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.header}>
@@ -21,13 +35,13 @@ export const ReviewandVerify = ({ className }: ReviewandVerifyProps) => {
                     <h1>IFpay</h1>
                 </div>
             </div>
-            <hr />
+            <hr /><br/>
             <div className={classNames(styles['progress-container'], styles.progress)}>
                 <div className={styles['progress-container-line']}></div>
                 <div className={classNames(styles.circle)}>1</div>
                 <div className={styles.circle}>2</div>
                 <div className={styles.circle}>3</div>
-                <div className={styles.circle}>4</div>
+                <div className={classNames(styles.circle, styles.active)}>4</div>
             </div>
             <div className={styles.container}>
                 <h1>Review and Verify</h1>
@@ -53,9 +67,21 @@ export const ReviewandVerify = ({ className }: ReviewandVerifyProps) => {
                 </form>
             </div>
             <div className={styles.buttons}>
-                <button className={styles.buttonstyle}>Send for Payee Verification</button>
+                <button className={styles.buttonstyle} onClick={handleOpenDialog}>
+                    Send for Payee Verification
+                </button>
                 <button className={styles.buttonedit}>Edit Details</button>
             </div>
+            {isDialogOpen && (
+                <div className={styles.dialog}>
+                <h2>Payee Details Confirmed</h2>
+                <p>The details you have entered have been confirmed as being correct by the payee bank</p>
+                <div className={styles['button-container']}>
+                    <button>Continue with payment</button>
+                    <button onClick={handleCloseDialog}>Cancel payment</button>
+                </div>
+                </div>
+            )}
         </div>
     );
 };

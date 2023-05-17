@@ -1,8 +1,6 @@
 import styles from './make-apayment.module.scss';
 import classNames from 'classnames';
 
-
-
 export interface MakeApaymentProps {
     className?: string;
 }
@@ -23,10 +21,10 @@ export const MakeApayment = ({ className }: MakeApaymentProps) => {
                     <h1>IFpay</h1>
                 </div>
             </div>
-            <hr />
+            <hr /><br/>
             <div className={classNames(styles['progress-container'], styles.progress)}>
                 <div className={styles['progress-container-line']}></div>
-                <div className={classNames(styles.circle)}>1</div>
+                <div className={classNames(styles.circle, styles.active)}>1</div>
                 <div className={styles.circle}>2</div>
                 <div className={styles.circle}>3</div>
                 <div className={styles.circle}>4</div>

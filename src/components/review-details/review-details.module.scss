@@ -39,7 +39,7 @@
 }
 
 .circle {
-  background-color: #fff;
+  background-color: #d3e8d3;
   color: #999;
   border-radius: 50%;
   height: 30px;
@@ -96,4 +96,7 @@
   display: flex;
   align-items: start;
   align-content: start;
+}
+.active {
+  background-color: #85ec85;
 }
